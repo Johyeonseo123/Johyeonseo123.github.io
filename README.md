@@ -1,5 +1,5 @@
 # Johyeonseo123.github.io
----------------------------------------
+
 # [Homework] H1
 
 [**homework2-1**](https://Johyeonseo123.github.io/Homework2-1.html)
