@@ -1,10 +1,6 @@
 # Johyeonseo123.github.io
 
-> This is a first blockqute.
->	> This is a second blockqute.
->	>	> This is a third blockqute.
-
->###[ homework ]
+>#[ homework ]
 >
 >	> [**homework2-1**](https://Johyeonseo123.github.io/Homework2-1.html)
 >	>
