@@ -1,6 +1,6 @@
 # Johyeonseo123.github.io
 
-### This is a H3
+### [homework]
 >
 > [**homework2-1**](https://Johyeonseo123.github.io/Homework2-1.html)
 >	
