@@ -13,4 +13,4 @@
 
 ### [homework 3]
 
-[**homework3-1**](https://Johyeonseo123.github.io/Homework3-1.php)
+[**homework3-1**](https://Johyeonseo123.github.io/Homework3-1.html)
