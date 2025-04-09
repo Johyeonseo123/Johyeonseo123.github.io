@@ -12,4 +12,4 @@
 
 
 [homework3-1]
-<img src="Homework3-1.jpg" alt="Girl in a jacket" width="1000" height="100">
+<img src="Homework3-1.png" alt="Girl in a jacket" width="1000" height="100">
