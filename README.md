@@ -24,4 +24,4 @@
 <img src="Homework3-4.png" alt="Girl in a jacket" width="800" height="600">
 
 [homework3-5]
-<img src="Homework3-5.png" alt="Girl in a jacket" width="800" height="1000">
+<img src="Homework3-5.png" alt="Girl in a jacket" width="500" height="400">
