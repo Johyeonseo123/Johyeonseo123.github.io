@@ -9,3 +9,7 @@
 [**homework2-3**](https://Johyeonseo123.github.io/Homework2-3.html)
 
 [**homework2-4**](https://Johyeonseo123.github.io/homework2-4.html)
+
+
+[homework3-1]
+<img src="Homework3-1.jpg" alt="Girl in a jacket" width="1000" height="100">
