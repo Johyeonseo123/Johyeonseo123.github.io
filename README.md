@@ -13,3 +13,15 @@
 
 [homework3-1]
 <img src="Homework3-1.png" alt="Girl in a jacket" width="1000" height="100">
+
+[homework3-2]
+<img src="Homework3-2.png" alt="Girl in a jacket" width="1000" height="100">
+
+[homework3-3]
+<img src="Homework3-3.png" alt="Girl in a jacket" width="1000" height="100">
+
+[homework3-4]
+<img src="Homework3-4.png" alt="Girl in a jacket" width="1000" height="100">
+
+[homework3-5]
+<img src="Homework3-5.png" alt="Girl in a jacket" width="1000" height="100">
