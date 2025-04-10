@@ -12,13 +12,13 @@
 
 ### [homework 3]
 
-[**homework3-1**](https://Johyeonseo123.github.io/Homework3-1-1.html)
+[**homework3-1**](https://Johyeonseo123.github.io/homework3-1-1.html)
 
-[**homework3-2**](https://Johyeonseo123.github.io/Homework3-2-1.html)
+[**homework3-2**](https://Johyeonseo123.github.io/homework3-2-1.html)
 
-[**homework3-3**](https://Johyeonseo123.github.io/Homework3-3-1.html)
+[**homework3-3**](https://Johyeonseo123.github.io/homework3-3-1.html)
 
-[**homework3-4**](https://Johyeonseo123.github.io/Homework3-4-1.html)
+[**homework3-4**](https://Johyeonseo123.github.io/homework3-4-1.html)
 
-[**homework3-5**](https://Johyeonseo123.github.io/Homework3-5-1.html)
+[**homework3-5**](https://Johyeonseo123.github.io/homework3-5-1.html)
 
