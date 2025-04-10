@@ -10,5 +10,3 @@
 
 [**homework2-4**](https://Johyeonseo123.github.io/homework2-4.html)
 
-<h2>homework3</h2>
-[**homework3-1**](https://Johyeonseo123.github.io/homework3-1.png)
