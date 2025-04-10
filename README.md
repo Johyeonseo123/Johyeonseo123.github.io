@@ -14,11 +14,11 @@
 
 [**homework3-1**](https://Johyeonseo123.github.io/homework3-1-1.html)
 
-[**homework3-2**](https://Johyeonseo123.github.io/homework3-2-1.html)
+[**homework3-2**](https://Johyeonseo123.github.io/homeworl3-2-1.html)
 
-[**homework3-3**](https://Johyeonseo123.github.io/homework3-3-1.html)
+[**homework3-3**](https://Johyeonseo123.github.io/homeworl3-3-1.html)
 
-[**homework3-4**](https://Johyeonseo123.github.io/homework3-4-1.html)
+[**homework3-4**](https://Johyeonseo123.github.io/homeworl3-4-1.html)
 
-[**homework3-5**](https://Johyeonseo123.github.io/homework3-5-1.html)
+[**homework3-5**](https://Johyeonseo123.github.io/homeworl3-5-1.html)
 
