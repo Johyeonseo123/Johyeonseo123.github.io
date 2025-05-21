@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+div {
+    border: 3px solid black;
+    border-radius: 30px;
+    padding: 10px;
+}
+
+.data {
+    border: 3px solid darkgrey;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.name {
+    text-align: center;
+}
+
+</style>
+</head>
+<body>
+
+<h1 class="name">[ Homework 5 ]</h1>
+
+<div>
+    <h3 class="name">HTML</h3>
+        <xmp class="data">
+            <!DOCTYPE html>
+            <html>
+                <head>
+                    <meta charset="utf-8">
+                    <title>Homework 5</title>
+                    <link rel="stylesheet" type="text/css" href="cafe.css" />
+                    <script type="text/javaScript" src="cafe.js"></script>
+                </head>
+
+                <body>
+                
+                    <div class="menu">
+                        <h2>메뉴</h2> 
+                        <h3>커피<h3>
+                        <hr class="one" color="#6f4e37">
+                        <div id="coffee-list"></div>
+                        <h3>에이드<h3>
+                        <hr class="one" color="#6f4e37">
+                        <div id="ade-list"></div>
+                        <h3>스무디<h3>
+                        <hr class="one" color="#6f4e37">
+                        <div id="smoothie-list"></div>
+                    </div>
+                    
+                    <div class="order">
+                        <h2>주문 내역</h2>
+                        <div class="dotted-box"></div>
+                        <div id="data"></div>
+                        <div>
+                        <div class="order_one">
+                            <div class="order_name">합계 금액</div>
+                            <div id="total" class="sum">총 합계: 0원</div>
+                        </div>
+                    </div>  
+                
+                    <script>
+                        let coffee = [
+                            { name: '아메리카노', english: '깊고 진한 에스프레소에 물을 더한 깔끔한 커피', price: 1700, number: 0 },
+                            { name: '카페라떼', english: '에스프레소에 따뜻한 우유를 더한 부드러운 커피', price: 2800, number: 0 },
+                            { name: '카푸치노', english: '에스프레소, 스팀 밀크, 풍성한 우유 거품이 어우러진 커피', price: 2800, number: 0 },
+                            { name: '바닐라라떼', english: '달콤한 바닐라 시럽이 더해진 향긋하고 부드러운 라떼', price: 3200, number: 0 },
+                            { name: '헤이즐넛라떼', english: '바닐라 시럽과 우유, 에스프레소 위에 카라멜 드리즐을 얹은 달콤한 음료', price: 3200, number: 0 },
+                            { name: '카라멜마끼야또', english: '바닐라 시럽과 우유, 에스프레소 위에 카라멜 드리즐을 얹은 달콤한 음료', price: 3200, number: 0 }
+                        ];
+
+                        const ade = [
+                            { name: '레몬에이드', english: '상큼한 레몬과 탄산수로 만든 청량한 에이드', price: 3300, number: 0 },
+                            { name: '청포도에이드', english: '달콤한 청포도 향과 톡 쏘는 탄산이 어우러진 음료', price: 3300, number: 0 },
+                            { name: '딸기에이드', english: '새콤달콤한 딸기와 시원한 탄산의 조화', price: 3300, number: 0 },
+                            { name: '자몽에이드', english: '자몽의 쌉싸름한 맛과 상큼함이 살아있는 탄산음료', price: 3300 , number: 0}
+                        ];
+
+                        const smoothie = [
+                            { name: '딸기스무디', english: '진한 딸기 맛과 부드러운 식감의 시원한 스무디', price: 3600, number: 0 },
+                            { name: '망고스무디', english: '열대과일 망고의 풍부한 향과 달콤함을 담은 스무디', price: 3600, number: 0 },
+                            { name: '블루베리스무디', english: '상큼한 블루베리와 부드러운 얼음이 어우러진 건강한 스무디', price: 3600, number: 0 }
+                        ];
+
+                        let h_coffee = "";
+                        let h_ade = "";
+                        let h_smoothie = "";
+
+                        for (let i = 0; i < coffee.length; i++) {
+                            h_coffee += `
+                                <div class="menu_one">
+                                    <div class="menu_name">${coffee[i].name}</div>
+                                    <div class="menu_english">${coffee[i].english}</div>
+                                    <div class="menu_price">${coffee[i].price.toLocaleString()}원</div>
+                                    <div class="menu_number">
+                                        <button onclick="count_coffee('${i}', 1)">+</button>
+                                        <div id="coffee${i}">0</div>
+                                        <button onclick="count_coffee('${i}', -1)">-</button>
+                                    </div>
+                                </div>
+                            `;
+                        };
+
+                        for (let i = 0; i < ade.length; i++) {
+                            h_ade += `
+                                <div class="menu_one">
+                                    <div class="menu_name">${ade[i].name}</div>
+                                    <div class="menu_english">${ade[i].english}</div>
+                                    <div class="menu_price">${ade[i].price.toLocaleString()}원</div>
+                                    <div class="menu_number">
+                                        <button onclick="count_ade('${i}', 1)">+</button>
+                                        <div id="ade${i}">0</div>
+                                        <button onclick="count_ade('${i}', -1)">-</button>
+                                    </div>
+                                </div>
+                            `;
+                        }
+                        
+                        for (let i = 0; i < smoothie.length; i++) {
+                            h_smoothie += `
+                                <div class="menu_one">
+                                    <div class="menu_name">${smoothie[i].name}</div>
+                                    <div class="menu_english">${smoothie[i].english}</div>
+                                    <div class="menu_price">${smoothie[i].price.toLocaleString()}원</div>
+                                    <div class="menu_number">
+                                        <button onclick="count_smoothie('${i}', 1)">+</button>
+                                        <div id="smoothie${i}">0</div>
+                                        <button onclick="count_smoothie('${i}', -1)">-</button>
+                                    </div>
+                                </div>
+                            `;
+                        };            
+
+                        document.getElementById("coffee-list").innerHTML = h_coffee;
+                        document.getElementById("ade-list").innerHTML = h_ade;
+                        document.getElementById("smoothie-list").innerHTML = h_smoothie;
+
+                        function count_coffee(i, amount) {
+                            coffee[i].number += amount;
+                            if (coffee[i].number < 0) coffee[i].number = 0;
+                                document.getElementById("coffee" + i).textContent = coffee[i].number;
+                            update(); 
+                        };
+
+                        function count_ade(i, amount) {
+                            ade[i].number += amount;
+                            if (ade[i].number < 0) ade[i].number = 0;
+                                document.getElementById("ade" + i).textContent = ade[i].number;
+                            update();
+                        };
+                        
+                        function count_smoothie(i, amount) {
+                            smoothie[i].number += amount;
+                            if (smoothie[i].number < 0) smoothie[i].number = 0;
+                                document.getElementById("smoothie" + i).textContent = smoothie[i].number;
+                            update();
+                        };
+
+                        function update() {
+                            const dataDiv = document.getElementById('data');
+                            const totalDiv = document.getElementById('total');
+                            dataDiv.innerHTML = '';
+                            let total = 0;
+
+                            const allMenus = [...coffee, ...ade, ...smoothie];
+
+                            for (let j = 0; j < allMenus.length; j++) {
+                                const item = allMenus[j];
+                                if (item.number > 0) {
+                                    const itemTotal = item.price * item.number;
+                                    total += itemTotal;
+                                    dataDiv.innerHTML += `
+                                        <div class="order_one">
+                                            <div class="order_name">${item.name}</div>
+                                            <div class="order_unitPrice">${item.price.toLocaleString()}원</div>
+                                            <div class="order_number">${item.number}</div>
+                                            <div class="order_price">${itemTotal.toLocaleString()}원</div>
+                                        </div>
+                                    `;
+                                }
+                            }
+
+                            totalDiv.textContent = `${total.toLocaleString()}원`;
+                        }
+                    </script>
+                </body>
+            </html>
+        </xmp>
+
+        <h3 class="name">CSS</h3>
+        <xmp class="data">
+            h1 {
+                text-align: center;
+            }
+
+            h2 {
+                color: #6f4e37;
+                font-family: Helvetica, sans-serif;
+                font-size: 30px;
+                text-align: center; 
+            }
+
+            hr {
+                color: #6f4e37;
+            }
+
+            .menu {
+                border: 3px solid whitesmoke;
+                width: 60%;
+                background-color: #faf3e0;
+                height : 900px;
+                padding-right: 60px;
+                padding-bottom: 10px;
+                padding-left: 60px;
+                border-radius: 50px;
+                float: left;
+            }
+
+            .order {
+                border: 3px solid darkgray;
+                border-radius: 10px;
+                width: 26%;
+                height : 900px;
+                padding-right: 60px;
+                padding-bottom: 10px;
+                padding-left: 60px;
+                float: right;
+            }
+
+            .menu_one { 
+                background-color:#cec19f;
+                border-radius: 10px;  /* 테두리 모서리 둥글게 */
+                height: 30px;
+                margin-top: 10px;
+                padding-top: 4px;
+                padding-bottom: 4px;
+                padding-left: 6px;
+                padding-right: 6px;
+            }
+
+            .menu_name {
+                float: left;
+                width: 15%;
+                display: flex;
+                align-items: center;
+            }
+
+            .menu_english {
+                float: left;
+                width: 65%;
+                font-size: 16px;
+                color: rgb(80, 80, 80);
+            }
+
+            .menu_price {
+                text-align: right;
+                float: left;
+                width: 9%;
+            }
+
+            .menu_number {
+                float: right;
+                width: 7%;
+                display: flex;
+                align-items: center;
+                gap: 10px;
+                font-size: 24px;
+            }
+
+            .order_one {
+                cursor: pointer;
+            }
+
+            .order_name {
+                float: left;
+                width: 50%;
+            }
+
+            .order_unitPrice {
+                float: left;
+                text-align: right;
+                width: 20%;
+            }
+
+            .order_number {
+                float: left;
+                text-align: right;
+                width: 10%;
+            }
+
+            .order_price {
+                float: left;
+                text-align: right;
+                width: 20%;
+            }
+
+            .dotted-box {
+                border-bottom: 2px dotted #555;
+                margin: 10px 0;
+            }
+
+            .sum {
+                cursor: pointer;
+                text-align: right;
+            }
+        </xmp>
+</div>
+
+</body>
+</html>
