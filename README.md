@@ -24,8 +24,8 @@
 
 ### [homework 6]
 
-[**homework6**](https://Johyeonseo123.github.io/homework6.html)
+[**homework6**](https://Johyeonseo123.github.io/Homework6.html)
 
 ### [homework 7]
 
-[**homework7**](https://Johyeonseo123.github.io/homework7.html)
+[**homework7**](https://Johyeonseo123.github.io/Homework7.html)
