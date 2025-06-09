@@ -1,0 +1,94 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<style>
+    body {
+        margin: 0px;
+        padding: 0px;
+    }
+</style>
+</head>
+<body>
+    <canvas id="myCanvas" width="500" height="500" style="border:1px solid #000000;"></canvas>
+    <script>
+
+    var canvas = document.getElementById('myCanvas');
+    var context = canvas.getContext('2d');
+    var lasttime; 
+    var num = 0;
+
+    var myRectangle = {
+        x: 0,
+        y: 0,
+        width: 50,
+        height: 50,
+        borderWidth: 5
+    };
+
+    var runAnimation = {
+        value: false
+    };
+
+    window.requestAnimFrame = (function(callback) {
+        return window.requestAnimationFrame || window.webkitRequestAnimationFrame || window.mozRequestAnimationFrame || window.oRequestAnimationFrame || window.msRequestAnimationFrame ||
+        function(callback) {
+            window.setTimeout(callback, 1000 / 60);
+        };
+    })();
+
+    function drawRect(myRectangle, context) {
+        context.beginPath();
+        context.rect(myRectangle.x, myRectangle.y, myRectangle.width, myRectangle.height);
+        context.fillStyle = '#8ED6FF';
+        context.fill();
+        context.lineWidth = myRectangle.borderWidth;
+        context.strokeStyle = 'Blue';
+        context.stroke();
+    }
+
+    function animate(myRectangle, runAnimation, canvas, context) {
+        if(runAnimation.value) {
+            // update
+            var time = (new Date()).getTime();
+            var timeDiff = time - lasttime;
+            var linearDistEachFrame = 5;
+
+            if (num == 0) {
+                myRectangle.x += linearDistEachFrame;
+                if (myRectangle.x >= 446) 
+                    num = 1;
+            }else if (num == 1) {
+                myRectangle.y += linearDistEachFrame;
+                if (myRectangle.y >= 446)
+                    num = 2;
+            }else if (num == 2) {
+                myRectangle.x -= linearDistEachFrame;
+                if (myRectangle.x <= 4.5)
+                    num = 3;
+            }else if (num == 3) {
+                myRectangle.y -= linearDistEachFrame;
+                if (myRectangle.y <= 4.5)
+                    num = 0;
+            }
+            context.clearRect(0, 0, canvas.width, canvas.height);
+            drawRect(myRectangle, context);
+
+            requestAnimFrame(function() {
+                animate(myRectangle, runAnimation, canvas, context);
+            });
+        }
+    }
+
+    // add click listener to canvas
+    document.getElementById('myCanvas').addEventListener('click', function() {
+        runAnimation.value = !runAnimation.value;
+        if(runAnimation.value) {
+            lasttime = (new Date()).getTime();
+            animate(myRectangle, runAnimation, canvas, context);
+        }
+    });
+
+    drawRect(myRectangle, context);
+    </script>
+</body>
+</html>    
