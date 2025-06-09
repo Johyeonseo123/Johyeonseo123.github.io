@@ -22,10 +22,6 @@
 
 [**homework3-5**](https://Johyeonseo123.github.io/Homework3-5-1.html)
 
-### [homework 4]
-
-### [homework 5]
-
 ### [homework 6]
 
 [**homework6**](https://Johyeonseo123.github.io/homework6.html)
