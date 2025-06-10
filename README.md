@@ -21,11 +21,3 @@
 [**homework3-4**](https://Johyeonseo123.github.io/Homework3-4-1.html)
 
 [**homework3-5**](https://Johyeonseo123.github.io/Homework3-5-1.html)
-
-### [homework 6]
-
-[**homework6**](https://Johyeonseo123.github.io/Homework6.html)
-
-### [homework 7]
-
-[**homework7**](https://Johyeonseo123.github.io/Homework7.html)
